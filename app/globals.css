@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #FEF9C3; 
+  --text-primary: #2E0854; 
+}
+
+.dark {
+  /* Il viola elettrico saturo preso dall'immagine di riferimento */
+  --bg-primary: #7C3AED; /* Corrisponde a un bel purple-600/700 vibrante e carico */
+  /* Giallo caldo d'accento per testi e bordi */
+  --text-primary: #FDE047; 
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}

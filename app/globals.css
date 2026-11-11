@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --bg-primary: #FEF9C3; 
-  --text-primary: #2E0854; 
+/* Definizione dei colori personalizzati del brand */
+@theme {
+  --color-violet-bg: #13032b;
+  --color-violet-card: #1d073e;
+  --color-yellow-accent: #fde047; /* yellow-300 */
 }
 
-.dark {
-  /* Il viola elettrico saturo preso dall'immagine di riferimento */
-  --bg-primary: #7C3AED; /* Corrisponde a un bel purple-600/700 vibrante e carico */
-  /* Giallo caldo d'accento per testi e bordi */
-  --text-primary: #FDE047; 
-}
+/* Variante personalizzata per la modalità Light quando la classe .light è sul tag <html> */
+@custom-variant light (&:where(.light, .light *));
 
+/* Stili base di default (DARK MODE) */
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--color-violet-bg);
+  color: #fde047;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Override quando la modalità LIGHT è attiva */
+html.light body {
+  background-color: #fde047; /* Sfondo chiaro/giallino tenue */
+  color: #13032b;
 }

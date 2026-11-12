@@ -1,44 +1,57 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Hero() {
   return (
-    <section className="flex-1 flex items-center justify-center px-6 md:px-12 py-20 md:py-32 max-w-7xl mx-auto w-full">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center w-full">
+    <section className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-12 pt-6 pb-16 md:py-28 max-w-7xl mx-auto w-full transition-colors duration-300">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center w-full">
         
-        {/* Colonna Testi */}
-        <div className="md:col-span-7 flex flex-col items-start text-left">
+        {/* Colonna Testi (Su mobile va sotto la mascotte o sopra a seconda dell'ordine) */}
+        <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
           
-          <span className="px-4 py-1.5 mb-6 text-xs font-bold tracking-wider uppercase bg-yellow-300 text-purple-950 rounded-full shadow-md">
+          {/* Badge Ruolo */}
+          <span className="px-3.5 py-2.5 mb-5 text-xs font-bold tracking-wider uppercase bg-[#fde047] text-[#13032b] light:bg-[#13032b] light:text-[#fde047] rounded-full border-2 border-[#7C3AED] shadow-md">
             Junior Front-End Developer & 3D Designer
           </span>
           
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
+          {/* Titolo Principale */}
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
             Trasformo il design in codice fluido.
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-xl text-[#f3e8ff] light:text-[#13032b] mb-10 max-w-2xl leading-relaxed font-medium opacity-90">
+          {/* Sottotitolo / Descrizione */}
+          <p className="text-[#f3e8ff] light:text-[#13032b] text-sm sm:text-base lg:text-xl mb-8 md:mb-10 max-w-2xl leading-relaxed font-medium opacity-90">
             Unione di estetica visiva (IED) e ingegneria frontend moderna con React, Next.js, TypeScript e Tailwind CSS.
           </p>
           
-          <div className="flex gap-4 flex-wrap justify-start">
-            <a 
-              href="#projects" 
-              className="px-7 py-3.5 font-bold bg-yellow-300 text-purple-950 rounded-xl shadow-lg hover:bg-yellow-400 transition-all transform hover:-translate-y-0.5"
+          {/* Pulsanti Call to Action */}
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
+            <Link 
+              href="Projects" 
+              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base"
             >
               Esplora i Progetti
-            </a>
-            <a 
-              href="#contact" 
-              className="px-7 py-3.5 font-bold bg-purple-950/40 text-yellow-300 border-2 border-yellow-300 rounded-xl hover:bg-purple-950/60 transition-all"
+            </Link>
+            <Link 
+              href="Contact" 
+              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base"
             >
               Mettiamoci in contatto
-            </a>
+            </Link>
           </div>
 
         </div>
 
-        {/* Colonna Destra (Spazio per Avatar / Grafica) */}
-        <div className="md:col-span-5 hidden md:flex justify-center items-center">
-          <div className="w-full h-80 rounded-2xl bg-purple-950/40 border-2 border-yellow-300/30 flex items-center justify-center text-yellow-300/60 text-sm shadow-xl p-6 text-center backdrop-blur-sm">
-            [Spazio per Elemento Grafico / Avatar / Tech Stack Preview]
+        {/* Colonna Destra: Mascotte Vettoriale Colorata */}
+        <div className="md:col-span-5 flex justify-center items-center order-1 md:order-2">
+          <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
+            <Image 
+              src="/avatar/avatar.png" 
+              alt="DLG Flying Eye Mascot" 
+              fill 
+              priority
+              className="object-contain drop-shadow-[0_15px_30px_rgba(253,224,71,0.15)]"
+            />
           </div>
         </div>
 

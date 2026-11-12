@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function MobileNav() {
@@ -9,13 +9,27 @@ export default function MobileNav() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  // Chiude automaticamente il menu se l'utente scorre la pagina
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
+
   return (
     <div className="md:hidden">
       {/* Pulsante Hamburger */}
       <button
         onClick={toggleMenu}
         aria-label="Toggle Menu"
-        className="p-2 rounded-lg text-current hover:bg-black/5 dark:hover:bg-white/10 transition-colors focus:outline-none"
+        className="p-2 rounded-lg text-current hover:bg-black/5 light:hover:bg-white/10 transition-colors focus:outline-none relative z-[70]"
       >
         <svg
           className="w-6 h-6 fill-current"
@@ -39,16 +53,16 @@ export default function MobileNav() {
         </svg>
       </button>
 
-      {/* Overlay Menu Mobile */}
+      {/* Overlay Menu Mobile a tutta larghezza (fixed) */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 border-b border-purple-900/20 light:border-yellow-300/20 shadow-xl flex flex-col p-6 space-y-4 font-bold text-lg animate-in slide-in-from-top-2 duration-200">
-          <Link href="#projects" onClick={closeMenu} className="hover:opacity-75 transition-opacity py-2">
+        <div className="fixed top-20 left-0 w-full z-[60] text-center bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 border-b border-purple-900/20 light:border-yellow-300/20 shadow-xl flex flex-col p-6 space-y-4 font-bold text-lg animate-in slide-in-from-top-2 duration-200">
+          <Link href="#projects" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
             Projects
           </Link>
-          <Link href="#about" onClick={closeMenu} className="hover:opacity-75 transition-opacity py-2">
+          <Link href="#about" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
             About
           </Link>
-          <Link href="#contact" onClick={closeMenu} className="hover:opacity-75 transition-opacity py-2">
+          <Link href="#contact" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
             Contact
           </Link>
         </div>

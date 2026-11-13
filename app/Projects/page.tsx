@@ -10,10 +10,10 @@ export default function ProjectsPage() {
 
   return (
     <div className="flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
-      <h1 className="text-4xl md:text-5xl font-black text-yellow-300 mb-6 tracking-tight">
+      <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
         Progetti & Case Studies
       </h1>
-      <p className="text-purple-100 text-lg mb-12 max-w-2xl">
+      <p className="text-purple-100 light:text-[#13032b] text-lg mb-12 max-w-2xl">
         Una selezione dei miei lavori nello sviluppo frontend e nell'infrastruttura web, focalizzati su performance, pulizia del codice e identità visiva.
       </p>
 

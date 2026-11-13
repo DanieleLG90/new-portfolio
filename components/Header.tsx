@@ -29,21 +29,21 @@ export default function Header() {
         {/* Navigazione Desktop (Nascosta su mobile) */}
         <nav className="hidden md:flex items-center gap-6 font-semibold">
           <Link 
-            href="#projects" 
+            href="Projects" 
             className="hover:opacity-80 transition-opacity"
           >
             Projects
           </Link>
 
           <Link 
-            href="#about" 
+            href="About" 
             className="hover:opacity-80 transition-opacity"
           >
             About
           </Link>
 
           <Link 
-            href="#contact" 
+            href="Contact" 
             className="hover:opacity-80 transition-opacity"
           >
             Contact

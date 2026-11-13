@@ -58,7 +58,7 @@ export default function Footer() {
 
       {/* Copyright Bar */}
       <div className="mt-8 pt-6 border-t border-current/10 text-center text-xs opacity-75 font-medium">
-        © {new Date().getFullYear()} Daniele Lorenzo Giacomazzi. All rights reserved.
+        © 2026 Daniele Lorenzo Giacomazzi. All rights reserved.
       </div>
     </footer>
   );

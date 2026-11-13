@@ -2,7 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-current/20 pt-8 pb-6 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full transition-colors duration-300">
+    <footer id="contact" 
+            className="border-t border-current/20 pt-8 pb-6 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full transition-colors duration-300
+              
+              bg-yellow-300 text-[#13032b] border-purple-900/30
+              /* LIGHT MODE: Sfondo Viola Scuro, Testo Giallo */
+              light:bg-[#13032b] light:text-yellow-300 light:border-yellow-300/30">
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
         
         {/* Colonna 1: Barra di navigazione stile Header */}

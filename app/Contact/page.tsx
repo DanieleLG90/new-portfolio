@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             {/* Email Card */}
             <a 
-              href="mailto:daniele.giacomazzi@example.com" 
+              href="mailto:giacomazzi06@gmail.com" 
               className="flex items-center gap-4 p-4 rounded-2xl border-2 border-current bg-black/5 light:bg-white/5 hover:scale-[1.01] transition-all shadow-md group"
             >
               <div className="w-10 h-10 rounded-xl bg-current/10 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition-transform">
@@ -58,7 +58,7 @@ export default function ContactPage() {
             {/* Social Links */}
             <div className="flex gap-4 pt-2">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/daniele-lorenzo-giacomazzi/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex-1 py-3.5 px-4 text-center rounded-xl border-2 border-current font-bold text-sm bg-black/5 light:bg-white/5 hover:scale-[1.02] active:scale-95 transition-all shadow-md flex items-center justify-center gap-2"
@@ -70,7 +70,7 @@ export default function ContactPage() {
             </a>
 
             <a 
-              href="https://github.com" 
+              href="https://github.com/DanieleLG90" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex-1 py-3.5 px-4 text-center rounded-xl border-2 border-current font-bold text-sm bg-black/5 light:bg-white/5 hover:scale-[1.02] active:scale-95 transition-all shadow-md flex items-center justify-center gap-2"

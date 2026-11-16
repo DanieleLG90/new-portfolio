@@ -3,13 +3,13 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer id="contact" 
-            className="border-t border-current/20 pt-8 pb-6 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full transition-colors duration-300
+            className="border-t border-current/20 pt-8 pb-6 px-4 sm:px-6 md:px-12 mx-auto w-full transition-colors duration-300
               
               bg-yellow-300 text-[#13032b] border-purple-900/30
               /* LIGHT MODE: Sfondo Viola Scuro, Testo Giallo */
               light:bg-[#13032b] light:text-yellow-300 light:border-yellow-300/30">
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left max-w-7xl mx-auto">
         
         {/* Colonna 1: Barra di navigazione stile Header */}
         <nav className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 font-bold text-sm">
@@ -33,7 +33,7 @@ export default function Footer() {
             Mettiamoci in contatto
           </p>
           <a 
-            href="mailto:daniele.giacomazzi@example.com" 
+            href="mailto:giacomazzi06@gmail.com" 
             className="text-xs sm:text-sm font-semibold underline underline-offset-4 hover:opacity-75 transition-opacity"
           >
             Invia una mail &rarr;
@@ -43,7 +43,7 @@ export default function Footer() {
         {/* Colonna 3: Social Links (LinkedIn & GitHub) */}
         <div className="flex justify-center md:justify-end gap-6 font-bold text-sm">
           <Link 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/daniele-lorenzo-giacomazzi/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hover:opacity-75 transition-opacity"
@@ -51,7 +51,7 @@ export default function Footer() {
             LinkedIn
           </Link>
           <Link 
-            href="https://github.com" 
+            href="https://github.com/DanieleLG90" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="hover:opacity-75 transition-opacity"

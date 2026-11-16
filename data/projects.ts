@@ -19,7 +19,7 @@ export const PROJECTS_DATA: Project[] = [
     tags: ["WordPress", "PHP", "cPanel", "Responsive UI"],
     desktopImage: "/img-progetti/perla nera desktop.png",
     mobileImage: "/img-progetti/perla nera mobile.png",
-    liveUrl: "#",
+    liveUrl: "https://www.perlaneraguesthouse.it/it",
   },
   {
     id: "femer-beauty",
@@ -29,6 +29,6 @@ export const PROJECTS_DATA: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Headless WP", "TypeScript"],
     desktopImage: "/img-progetti/femer desktop.png",
     mobileImage: "/img-progetti/femer mobile.png",
-    liveUrl: "#",
+    liveUrl: "https://femer-beautysuite.vercel.app/",
   },
 ];

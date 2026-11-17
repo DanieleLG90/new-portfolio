@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PeekMascot from "@/components/mascot/PeekMascot";
 
 export default function About() {
   const skills = [
@@ -14,6 +15,8 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full border-t border-current/20">
+
+      <PeekMascot side="left" />
       
       {/* Intestazione Sezione */}
       <div className="flex flex-col items-center md:items-start mb-12">
@@ -28,7 +31,7 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mb-16">
         
         {/* Colonna Testo (Bio Personale + Professionale) */}
-        <div className="lg:col-span-6 flex flex-col justify-center text-center md:text-left space-y-4">
+        <div className=" text-purple-300 light:text-[#13032b] lg:col-span-6 flex flex-col justify-center text-center md:text-left space-y-4">
           <p className="text-base sm:text-lg leading-relaxed font-semibold">
             Credo fermamente che le idee migliori non nascano solo davanti a un monitor, ma vivendo le esperienze sul campo.
           </p>
@@ -94,7 +97,7 @@ export default function About() {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="p-4 rounded-xl border-2 border-current font-bold text-xs sm:text-sm text-center flex items-center justify-center bg-black/5 light:bg-white/5 shadow-md transition-all hover:scale-[1.02]"
+              className="p-4 rounded-xl border-2 border-current font-bold text-xs sm:text-sm text-center flex items-center justify-center bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 shadow-md transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
               {skill}
             </div>

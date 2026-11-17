@@ -29,13 +29,15 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
             <Link 
               href="Projects" 
-              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base"
+              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base
+                          hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
               Esplora i Progetti
             </Link>
             <Link 
               href="Contact" 
-              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base"
+              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base
+                          hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
               Mettiamoci in contatto
             </Link>

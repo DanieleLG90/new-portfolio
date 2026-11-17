@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
   return (
-    <div className="bg-purple-950/40 border-2 border-yellow-300/30 light:border-[#13032b] rounded-2xl p-4 sm:p-6 flex flex-col justify-between hover:border-yellow-300 light:hover:border-[#7C3AED] transition-all shadow-xl">
+    <div className="bg-purple-950 light:bg-purplr-950 border-2 border-yellow-300/30 light:border-[#13032b] rounded-2xl p-4 sm:p-6 flex flex-col justify-between hover:border-yellow-300 light:hover:border-[#7C3AED] transition-all shadow-xl">
       <div>
         {/* Anteprima Immagini (Desktop + Mobile) con altezze reattive */}
         <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
@@ -32,8 +32,8 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           </div>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-black mb-3">{project.title}</h2>
-        <p className="text-purple-100 light:text-[#13032b] text-xs sm:text-sm mb-6 leading-relaxed">
+        <h2 className="text-yellow-300 text-xl sm:text-2xl font-black mb-3">{project.title}</h2>
+        <p className="text-purple-100 text-xs sm:text-sm mb-6 leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -51,7 +51,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         <div className="flex flex-col sm:flex-row gap-3">
           <button 
             onClick={() => onSelect(project)}
-            className="w-full sm:flex-1 py-3 sm:py-2.5 px-4 bg-purple-900/60 hover:bg-purple-900 text-yellow-300 border border-yellow-300/50 rounded-xl font-bold text-sm transition-all text-center active:scale-95"
+            className="w-full sm:flex-1 py-3 sm:py-2.5 px-4 bg-purple-900/60 hover:bg-purple-900 text-yellow-300 border border-yellow-300/50 rounded-xl font-bold text-sm transition-all text-center active:scale-95 cursor-pointer"
           >
             Scopri di più
           </button>
@@ -62,7 +62,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
               rel="noopener noreferrer" 
               className="w-full sm:w-auto py-3 sm:py-2.5 px-5 bg-yellow-300 hover:bg-yellow-400 text-purple-950 rounded-xl font-bold text-sm transition-all text-center flex items-center justify-center active:scale-95"
             >
-              Visita ↗
+              Visita
             </a>
           )}
         </div>

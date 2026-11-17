@@ -4,12 +4,16 @@ import { useState } from "react";
 import { PROJECTS_DATA, Project } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
+import PeekMascot from "@/components/mascot/PeekMascot";
 
 export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
+    <div className="relative flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
+      {/* Mascotte che sbircia da destra */}
+      <PeekMascot side="right" />
+
       <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
         Progetti & Case Studies
       </h1>

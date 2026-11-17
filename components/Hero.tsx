@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroMascot from "@/components/mascot/HeroMascot";
 
 export default function Hero() {
   return (
@@ -45,13 +46,9 @@ export default function Hero() {
         {/* Colonna Destra: Mascotte Vettoriale Colorata */}
         <div className="md:col-span-5 flex justify-center items-center order-1 md:order-2">
           <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
-            <Image 
-              src="/avatar/avatar.png" 
-              alt="DLG Flying Eye Mascot" 
-              fill 
-              priority
-              className="object-contain drop-shadow-[0_15px_30px_rgba(253,224,71,0.15)]"
-            />
+
+            <HeroMascot />
+
           </div>
         </div>
 

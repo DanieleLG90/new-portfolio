@@ -17,6 +17,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
               src={project.desktopImage} 
               alt={`${project.title} Desktop`} 
               fill 
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover object-top"
             />
           </div>
@@ -24,7 +25,8 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             <Image 
               src={project.mobileImage} 
               alt={`${project.title} Mobile`} 
-              fill 
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" 
               className="object-cover object-top"
             />
           </div>

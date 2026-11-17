@@ -62,6 +62,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               src={project.desktopImage} 
               alt={`${project.title} Desktop View`} 
               fill 
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 600px"
               className="object-cover object-top"
               priority
             />
@@ -70,7 +71,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <Image 
               src={project.mobileImage} 
               alt={`${project.title} Mobile View`} 
-              fill 
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px" 
               className="object-cover object-top"
             />
           </div>

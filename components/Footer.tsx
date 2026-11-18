@@ -41,7 +41,17 @@ export default function Footer() {
         </div>
 
         {/* Colonna 3: Social Links (LinkedIn & GitHub) */}
-        <div className="flex justify-center md:justify-end gap-6 font-bold text-sm">
+        <div className="flex justify-center md:justify-end gap-6 font-bold text-sm items-center">
+          <a 
+            href="/Daniele_Lorenzo_Giacomazzi_CV.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:opacity-75 transition-opacity flex items-center gap-1.5 px-1.5 py-0.5  border-1 border-current rounded-md
+                        bg-[#13032b] text-[#fde047] light:bg-[#fde047] light:text-[#13032b]"
+          >
+            <span>CV</span>
+            <span className="text-xs">📄</span>
+          </a>
           <Link 
             href="https://www.linkedin.com/in/daniele-lorenzo-giacomazzi/" 
             target="_blank" 

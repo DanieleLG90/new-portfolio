@@ -66,7 +66,7 @@ export default function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Il tuo nome" 
-                  className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-50"
+                  className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-75"
                 />
               </div>
 
@@ -81,7 +81,7 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="nome@esempio.com" 
-                  className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-50"
+                  className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-75"
                 />
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function ContactForm() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Es. Richiesta collaborazione / Progetto" 
-                className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-50"
+                className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-75"
               />
             </div>
 
@@ -111,14 +111,14 @@ export default function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Raccontami del tuo progetto o della tua idea..." 
-                className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none transition-all placeholder:opacity-50"
+                className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none transition-all placeholder:opacity-75"
               ></textarea>
             </div>
 
             <button 
               type="submit" 
               disabled={status === "loading"}
-              className="w-full py-4 font-black bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] border-2 border-yellow-300 rounded-xl shadow-lg hover:opacity-90 active:scale-95 transition-all text-sm uppercase tracking-wider disabled:opacity-50 cursor-pointer"
+              className="w-full py-4 font-black bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] border-2 border-yellow-300 rounded-xl shadow-lg hover:opacity-90 active:scale-95 transition-all text-sm uppercase tracking-wider disabled:opacity-75 cursor-pointer"
             >
               {status === "loading" ? "Invio in corso..." : "Invia Messaggio 🚀"}
             </button>

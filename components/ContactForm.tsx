@@ -34,12 +34,12 @@ export default function ContactForm() {
       {/* Mascotte posizionata sullo sfondo (z-0) */}
       <FormMascot delay={600} duration={3500} />
 
-      {/* Il tuo contenitore originale con z-10 per coprire la parte inferiore della mascotte */}
-      <div className="relative z-10 w-full max-w-2xl mx-auto p-6 sm:p-8 rounded-2xl border-2 border-current bg-[#13032b] light:bg-[#fde047] shadow-xl transition-colors duration-300">
+      {/* Contenitore principale a contrasto: Giallo in Dark, Viola in Light */}
+      <div className="relative z-10 w-full max-w-2xl mx-auto p-6 sm:p-8 rounded-2xl border-2 border-current bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 shadow-xl transition-colors duration-300">
         <h3 className="text-2xl font-black mb-6 tracking-tight">Invia un messaggio</h3>
 
         {status === "success" ? (
-          <div className="p-8 rounded-xl bg-green-500/10 border-2 border-green-500 text-center space-y-3">
+          <div className="p-8 rounded-xl bg-black/10 light:bg-white/10 border-2 border-current text-center space-y-3">
             <p className="text-2xl">🎉</p>
             <p className="text-lg font-bold">Messaggio inviato con successo!</p>
             <p className="text-xs sm:text-sm opacity-90 font-medium">
@@ -47,7 +47,7 @@ export default function ContactForm() {
             </p>
             <button 
               onClick={() => setStatus("idle")} 
-              className="mt-4 px-5 py-2.5 text-xs font-bold underline hover:opacity-80 transition-opacity"
+              className="mt-4 px-5 py-2.5 text-xs font-bold underline hover:opacity-80 transition-opacity cursor-pointer"
             >
               Invia un altro messaggio
             </button>
@@ -66,7 +66,7 @@ export default function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Il tuo nome" 
-                  className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-75"
+                  className="w-full p-3 rounded-xl border-2 border-current bg-black/5 light:bg-white/10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-current transition-all placeholder:opacity-75 placeholder:text-current"
                 />
               </div>
 
@@ -81,7 +81,7 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="nome@esempio.com" 
-                  className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-75"
+                  className="w-full p-3 rounded-xl border-2 border-current bg-black/5 light:bg-white/10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-current transition-all placeholder:opacity-75 placeholder:text-current"
                 />
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function ContactForm() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Es. Richiesta collaborazione / Progetto" 
-                className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-all placeholder:opacity-75"
+                className="w-full p-3 rounded-xl border-2 border-current bg-black/5 light:bg-white/10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-current transition-all placeholder:opacity-75 placeholder:text-current"
               />
             </div>
 
@@ -111,14 +111,14 @@ export default function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Raccontami del tuo progetto o della tua idea..." 
-                className="w-full p-3 rounded-xl border-2 border-current bg-transparent text-sm font-medium focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none transition-all placeholder:opacity-75"
+                className="w-full p-3 rounded-xl border-2 border-current bg-black/5 light:bg-white/10 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-current resize-none transition-all placeholder:opacity-75 placeholder:text-current"
               ></textarea>
             </div>
 
             <button 
               type="submit" 
               disabled={status === "loading"}
-              className="w-full py-4 font-black bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] border-2 border-yellow-300 rounded-xl shadow-lg hover:opacity-90 active:scale-95 transition-all text-sm uppercase tracking-wider disabled:opacity-75 cursor-pointer"
+              className="w-full py-4 font-black bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] border-2 border-current rounded-xl shadow-lg hover:opacity-90 active:scale-95 transition-all text-sm uppercase tracking-wider disabled:opacity-75 cursor-pointer"
             >
               {status === "loading" ? "Invio in corso..." : "Invia Messaggio 🚀"}
             </button>

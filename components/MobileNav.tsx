@@ -56,13 +56,13 @@ export default function MobileNav() {
       {/* Overlay Menu Mobile a tutta larghezza (fixed) */}
       {isOpen && (
         <div className="fixed top-20 left-0 w-full z-[60] text-center bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 border-b border-purple-900/20 light:border-yellow-300/20 shadow-xl flex flex-col p-6 space-y-4 font-bold text-lg animate-in slide-in-from-top-2 duration-200">
-          <Link href="#projects" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
+          <Link href="Projects" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
             Projects
           </Link>
-          <Link href="#about" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
+          <Link href="About" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
             About
           </Link>
-          <Link href="#contact" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
+          <Link href="Contact" onClick={closeMenu} className="border-b-2 border-[#7C3AED] hover:opacity-75 transition-opacity py-2">
             Contact
           </Link>
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PeekMascot from "@/components/mascot/PeekMascot";
 
 export default function About() {
   const skills = [
@@ -14,6 +15,8 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full border-t border-current/20">
+
+      <PeekMascot side="left" />
       
       {/* Intestazione Sezione */}
       <div className="flex flex-col items-center md:items-start mb-12">
@@ -28,7 +31,7 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mb-16">
         
         {/* Colonna Testo (Bio Personale + Professionale) */}
-        <div className="lg:col-span-6 flex flex-col justify-center text-center md:text-left space-y-4">
+        <div className=" text-purple-300 light:text-[#13032b] lg:col-span-6 flex flex-col justify-center text-center md:text-left space-y-4">
           <p className="text-base sm:text-lg leading-relaxed font-semibold">
             Credo fermamente che le idee migliori non nascano solo davanti a un monitor, ma vivendo le esperienze sul campo.
           </p>
@@ -38,6 +41,25 @@ export default function About() {
           <p className="text-sm sm:text-base leading-relaxed opacity-90 font-medium">
             Dalle sfide all'aperto e in montagna, ai progetti manuali e alle avventure in viaggio, amo sperimentare, costruire ed esplorare. Questa curiosità continua si riflette direttamente nel modo in cui creo prodotti digitali: con energia, concretezza e un'attenzione visiva costante.
           </p>
+
+          {/* Sezione Download CV a forte contrasto */}
+          <div className="mt-16 p-6 sm:p-8 rounded-2xl border-2 border-purple-300 light:border-current bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl transition-colors duration-300">
+            <div className="text-center sm:text-left">
+              <h3 className="text-xl sm:text-2xl font-black mb-1">Vuoi approfondire il mio profilo?</h3>
+              <p className="text-xs sm:text-sm opacity-90 font-medium">
+                Scarica il mio CV aggiornato con tutte le mie esperienze e competenze tecniche.
+              </p>
+            </div>
+            <a 
+              href="/Daniele_Lorenzo_Giacomazzi_CV.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] border-2 border-current rounded-xl font-black text-sm transition-all hover:-translate-y-0.5 active:scale-95 shadow-lg flex items-center gap-2 shrink-0 cursor-pointer"
+            >
+              Scarica CV 📄
+            </a>
+          </div>
+
         </div>
 
         {/* Colonna Foto (Griglia a 3 Immagini) */}
@@ -94,7 +116,7 @@ export default function About() {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="p-4 rounded-xl border-2 border-current font-bold text-xs sm:text-sm text-center flex items-center justify-center bg-black/5 light:bg-white/5 shadow-md transition-all hover:scale-[1.02]"
+              className="p-4 rounded-xl border-2 border-current font-bold text-xs sm:text-sm text-center flex items-center justify-center bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 shadow-md transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
               {skill}
             </div>

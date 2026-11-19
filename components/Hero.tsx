@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroMascot from "@/components/mascot/HeroMascot";
 
 export default function Hero() {
   return (
@@ -28,13 +29,15 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
             <Link 
               href="Projects" 
-              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base"
+              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base
+                          hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
               Esplora i Progetti
             </Link>
             <Link 
               href="Contact" 
-              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base"
+              className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base
+                          hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
               Mettiamoci in contatto
             </Link>
@@ -45,13 +48,9 @@ export default function Hero() {
         {/* Colonna Destra: Mascotte Vettoriale Colorata */}
         <div className="md:col-span-5 flex justify-center items-center order-1 md:order-2">
           <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
-            <Image 
-              src="/avatar/avatar.png" 
-              alt="DLG Flying Eye Mascot" 
-              fill 
-              priority
-              className="object-contain drop-shadow-[0_15px_30px_rgba(253,224,71,0.15)]"
-            />
+
+            <HeroMascot />
+
           </div>
         </div>
 

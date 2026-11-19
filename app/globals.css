@@ -22,3 +22,17 @@ html.light body {
   background-color: #fde047; /* Sfondo chiaro/giallino tenue */
   color: #13032b;
 }
+
+
+@keyframes heroBounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+.animate-hero-bounce {
+  animation: heroBounce 2.2s ease-in-out infinite;
+}

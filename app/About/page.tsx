@@ -21,10 +21,10 @@ export default function About() {
       {/* Intestazione Sezione */}
       <div className="flex flex-col items-center md:items-start mb-12">
         <span className="px-3.5 py-1.5 mb-3 text-xs font-bold tracking-wider uppercase bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] rounded-full shadow-md">
-          Chi Sono
+          About Me & Philosophy
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-center md:text-left">
-          Oltre il codice, nella vita vera.
+          Beyond the code, in the real world
         </h2>
       </div>
 
@@ -33,21 +33,21 @@ export default function About() {
         {/* Colonna Testo (Bio Personale + Professionale) */}
         <div className=" text-purple-300 light:text-[#13032b] lg:col-span-6 flex flex-col justify-center text-center md:text-left space-y-4">
           <p className="text-base sm:text-lg leading-relaxed font-semibold">
-            Credo fermamente che le idee migliori non nascano solo davanti a un monitor, ma vivendo le esperienze sul campo.
+            I firmly believe that the best ideas don't just happen in front of a monitor, but by experiencing life out in the field.
           </p>
           <p className="text-sm sm:text-base leading-relaxed opacity-90 font-medium">
-            Con una formazione in animazione 3D all'IED e anni di studio sul campo web, ho imparato a fondere l'occhio per il design con il rigore del codice moderno. Ma per me lo sviluppo è solo una parte del quadro: la cura per i dettagli, la risoluzione dei problemi e la ricerca dell'estetica mi guidano in tutto ciò che faccio.
+            With a background in 3D animation from IED and years of hands-on web development study, I’ve learned to blend a keen eye for design with the rigor of modern code. But for me, development is only part of the picture: attention to detail, problem-solving, and the pursuit of aesthetics guide everything I do.
           </p>
           <p className="text-sm sm:text-base leading-relaxed opacity-90 font-medium">
-            Dalle sfide all'aperto e in montagna, ai progetti manuali e alle avventure in viaggio, amo sperimentare, costruire ed esplorare. Questa curiosità continua si riflette direttamente nel modo in cui creo prodotti digitali: con energia, concretezza e un'attenzione visiva costante.
+            From outdoor and mountain challenges to hands-on crafting projects and travel adventures, I love to experiment, build, and explore. This continuous curiosity directly fuels the way I craft digital products: with energy, practicality, and constant visual attention.
           </p>
 
           {/* Sezione Download CV a forte contrasto */}
           <div className="mt-16 p-6 sm:p-8 rounded-2xl border-2 border-purple-300 light:border-current bg-yellow-300 text-[#13032b] light:bg-[#13032b] light:text-yellow-300 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl transition-colors duration-300">
             <div className="text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-black mb-1">Vuoi approfondire il mio profilo?</h3>
+              <h3 className="text-xl sm:text-2xl font-black mb-1">Want to learn more about my profile?</h3>
               <p className="text-xs sm:text-sm opacity-90 font-medium">
-                Scarica il mio CV aggiornato con tutte le mie esperienze e competenze tecniche.
+                Download my updated CV with all my experiences and technical skills.
               </p>
             </div>
             <a 
@@ -56,7 +56,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="px-6 py-3.5 bg-[#13032b] text-yellow-300 light:bg-yellow-300 light:text-[#13032b] border-2 border-current rounded-xl font-black text-sm transition-all hover:-translate-y-0.5 active:scale-95 shadow-lg flex items-center gap-2 shrink-0 cursor-pointer"
             >
-              Scarica CV 📄
+              Download CV 📄
             </a>
           </div>
 
@@ -110,7 +110,7 @@ export default function About() {
       {/* Sezione Tech Stack in Basso */}
       <div className="pt-8 border-t border-current/10 mb-16">
         <h3 className="text-xl sm:text-2xl font-extrabold mb-6 text-center md:text-left">
-          Core Tech Stack & Strumenti
+          Core Tech Stack & Tools
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
@@ -127,19 +127,19 @@ export default function About() {
       {/* Sezione Oltre lo schermo: Passioni & Manualità */}
       <div className="border-t-2 border-current/20 pt-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
-          Oltre lo schermo: Passioni & Manualità
+          Beyond the Screen: Passions & Hands-on Mindset
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="p-6 rounded-2xl border-2 border-current bg-black/5 light:bg-white/5 shadow-lg">
-            <h3 className="text-xl font-bold mb-3">🧗‍♂️ Arrampicata</h3>
+            <h3 className="text-xl font-bold mb-3">🧗‍♂️ Climbing & Outdoor Life</h3>
             <p className="text-sm leading-relaxed opacity-90 font-medium">
-              Pratico regolarmente arrampicata indoor e outdoor. Richiede concentrazione, problem-solving analitico e gestione della tensione: lo stesso approccio mentale che applico quando affrongo un bug complesso in codebase.
+              I regularly practice indoor and outdoor climbing, alongside trekking and mountain adventures. Navigating routes requires focus, analytical problem-solving, and managing tension under pressure—the exact same mental framework I bring when tackling complex bugs in a codebase.
             </p>
           </div>
           <div className="p-6 rounded-2xl border-2 border-current bg-black/5 light:bg-white/5 shadow-lg">
-            <h3 className="text-xl font-bold mb-3">🪵 Falegnameria & Fai-da-te</h3>
+            <h3 className="text-xl font-bold mb-3">🛠️ Crafting & Mindful Creativity</h3>
             <p className="text-sm leading-relaxed opacity-90 font-medium">
-              Amo lavorare il legno e dedicarmi alla falegnameria artigianale. La cura per l'allineamento dei materiali, la precisione dei tagli e la tangibilità del risultato rispecchiano la mia passione per la costruzione di interfacce curate nei minimi dettagli.
+              I thrive on hands-on making, physical crafting, and exploring new creative outlets. Driven by continuous curiosity and constant learning, this maker mindset translates directly into building software: attention to precision, alignment, and bringing tangible ideas to life.
             </p>
           </div>
         </div>

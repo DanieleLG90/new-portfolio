@@ -29,14 +29,19 @@ export default function Footer() {
 
         {/* Colonna 2: Frase d'impatto e link alla pagina/sezione contatti */}
         <div className="flex flex-col items-center">
-          <p className="text-sm sm:text-base font-bold mb-2">
-            Mettiamoci in contatto
+          <p className="text-sm sm:text-base font-bold text-center mb-2">
+            Lets connect!
           </p>
-          <a 
-            href="mailto:giacomazzi06@gmail.com" 
-            className="text-xs sm:text-sm font-semibold underline underline-offset-4 hover:opacity-75 transition-opacity"
+          <a
+            href="mailto:giacomazzi06@gmail.com"
+            className="text-sm font-semibold underline underline-offset-4 hover:opacity-75 transition-opacity inline-flex items-center gap-1.5"
           >
-            Invia una mail &rarr;
+            <span className="hover:scale-105 transition-scale">
+              Send an email ✉️
+            </span>
+            <span aria-hidden="true" className="hover:translate-x-0.5 transition-transform">
+              &rarr;
+            </span>
           </a>
         </div>
 

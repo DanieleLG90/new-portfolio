@@ -12,17 +12,17 @@ export default function Hero() {
           
           {/* Badge Ruolo */}
           <span className="px-3.5 py-2.5 mb-5 text-xs font-bold tracking-wider uppercase bg-[#fde047] text-[#13032b] light:bg-[#13032b] light:text-[#fde047] rounded-full border-2 border-[#7C3AED] shadow-md">
-            Junior Front-End Developer & 3D Designer
+            Web Developer & Creative Mind
           </span>
           
           {/* Titolo Principale */}
           <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
-            Trasformo il design in codice fluido.
+            Building high-performance web apps with distinctive design.
           </h1>
           
           {/* Sottotitolo / Descrizione */}
           <p className="text-[#f3e8ff] light:text-[#13032b] text-sm sm:text-base lg:text-xl mb-8 md:mb-10 max-w-2xl leading-relaxed font-medium opacity-90">
-            Unione di estetica visiva (IED) e ingegneria frontend moderna con React, Next.js, TypeScript e Tailwind CSS.
+            Bridging technical precision and visual craftsmanship. From modern Next.js architectures and headless backends to robust database setups, I build scalable digital products tailored for remote teams worldwide.
           </p>
           
           {/* Pulsanti Call to Action */}
@@ -32,14 +32,14 @@ export default function Hero() {
               className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base
                           hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
-              Esplora i Progetti
+              Explore Projects
             </Link>
             <Link 
               href="Contact" 
               className="px-6 sm:px-7 py-3.5 font-bold bg-transparent border-2 border-current rounded-xl hover:bg-black/5 light:hover:bg-white/5 active:scale-95 transition-all text-center text-sm sm:text-base
                           hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-200 cursor-pointer"
             >
-              Mettiamoci in contatto
+              Let's Connect
             </Link>
           </div>
 

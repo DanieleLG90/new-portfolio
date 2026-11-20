@@ -53,7 +53,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             onClick={() => onSelect(project)}
             className="w-full sm:flex-1 py-3 sm:py-2.5 px-4 bg-purple-900/60 hover:bg-purple-900 text-yellow-300 border border-yellow-300/50 rounded-xl font-bold text-sm transition-all text-center active:scale-95 cursor-pointer"
           >
-            Scopri di più
+            Learn More
           </button>
           {project.liveUrl && (
             <a 
@@ -62,7 +62,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
               rel="noopener noreferrer" 
               className="w-full sm:w-auto py-3 sm:py-2.5 px-5 bg-yellow-300 hover:bg-yellow-400 text-purple-950 rounded-xl font-bold text-sm transition-all text-center flex items-center justify-center active:scale-95"
             >
-              Visita
+              Live Site
             </a>
           )}
         </div>

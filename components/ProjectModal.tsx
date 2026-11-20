@@ -81,7 +81,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         {/* Descrizione estesa */}
         <div className="mb-6">
           <h3 className="text-xs font-bold mb-2 uppercase tracking-wider text-yellow-300/80">
-            Panoramica e Soluzione
+            Project Overview
           </h3>
           <p className="text-sm md:text-base leading-relaxed text-purple-100 font-medium">
             {project.longDescription}
@@ -91,7 +91,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         {/* Stack Tecnologico */}
         <div className="mb-8">
           <h3 className="text-xs font-bold uppercase tracking-wider text-yellow-300/80 mb-3">
-            Stack Tecnologico
+            Tech Stack
           </h3>
           <div className="flex gap-2 flex-wrap">
             {project.tags.map((tag) => (
@@ -131,7 +131,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               rel="noopener noreferrer" 
               className="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm bg-yellow-300 text-purple-950 hover:scale-[1.02] active:scale-95 transition-all shadow-lg flex items-center gap-2"
             >
-              Visita Sito Live
+              Visit Live Site
             </a>
           )}
 
@@ -140,7 +140,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             onClick={onClose}
             className="px-4 py-2.5 rounded-xl border border-yellow-300/40 font-bold text-xs sm:text-sm hover:opacity-80 transition-all cursor-pointer"
           >
-            Chiudi
+            Close <strong className="ml-1">✕</strong>
           </button>
         </div>
 

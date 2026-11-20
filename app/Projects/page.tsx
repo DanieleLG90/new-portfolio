@@ -15,10 +15,10 @@ export default function ProjectsPage() {
       <PeekMascot side="right" />
 
       <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
-        Progetti & Case Studies
+        Projects & Case Studies
       </h1>
       <p className="text-purple-100 light:text-[#13032b] text-lg mb-12 max-w-2xl">
-        Una selezione dei miei lavori nello sviluppo frontend e nell'infrastruttura web, focalizzati su performance, pulizia del codice e identità visiva.
+        A selection of my work in frontend development and web infrastructure, focused on performance, clean code, and visual identity.
       </p>
 
       {/* Griglia scalabile dei progetti */}

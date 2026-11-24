@@ -37,13 +37,13 @@ export default function ContactPage() {
               </div>
               <div className="overflow-hidden">
                 <p className="text-[10px] sm:text-xs opacity-75 font-bold uppercase tracking-wider">Email</p>
-                <p className="text-sm sm:text-base font-black truncate">daniele.giacomazzi@example.com</p>
+                <p className="text-sm sm:text-base font-black truncate">giacomazzi06@gmail.com</p>
               </div>
             </a>
 
             {/* Phone Card */}
             <a
-              href="tel:+393330000000"
+              href="tel:393473834574"
               className="flex items-center gap-4 p-4 rounded-2xl border-2 border-current bg-black/5 light:bg-white/5 hover:-translate-y-0.5 active:scale-95 transition-all duration-10 transition-colors duration-10 shadow-md group cursor-pointer"
             >
               <div className="w-10 h-10 rounded-xl bg-current/10 flex items-center justify-center font-bold text-lg group-hover:scale-110 transition-transform">
@@ -51,7 +51,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-[10px] sm:text-xs opacity-75 font-bold uppercase tracking-wider">Phone</p>
-                <p className="text-sm sm:text-base font-black">+39 333 000 0000</p>
+                <p className="text-sm sm:text-base font-black">+39 3473834574</p>
               </div>
             </a>
 

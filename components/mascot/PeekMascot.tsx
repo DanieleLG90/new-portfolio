@@ -3,46 +3,60 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+// Traccia le animazioni già eseguite per ciascun id in questo caricamento di pagina
+const playedIds = new Set<string>();
+
 interface PeekMascotProps {
+  id?: string;
   side?: "left" | "right";
   delay?: number;
   duration?: number;
 }
 
 export default function PeekMascot({
+  id = "default",
   side = "right",
   delay = 500,
   duration = 3200,
 }: PeekMascotProps) {
-  const [stage, setStage] = useState<"hidden" | "peeking" | "gone">("hidden");
+  const [stage, setStage] = useState<"hidden" | "peeking" | "done">("hidden");
 
   useEffect(() => {
-    // 1. Entrata fluida
+    if (playedIds.has(id)) {
+      setStage("done");
+      return;
+    }
+
+    let cancelled = false;
+    let hideTimer: ReturnType<typeof setTimeout>;
+    let cleanupTimer: ReturnType<typeof setTimeout>;
+
     const peekTimer = setTimeout(() => {
+      if (cancelled) return;
+
+      playedIds.add(id);
       setStage("peeking");
+
+      hideTimer = setTimeout(() => {
+        if (!cancelled) setStage("hidden");
+      }, duration);
+
+      cleanupTimer = setTimeout(() => {
+        if (!cancelled) setStage("done");
+      }, duration + 1000);
     }, delay);
 
-    // 2. Inizio uscita fluida
-    const hideTimer = setTimeout(() => {
-      setStage("hidden");
-    }, delay + duration);
-
-    // 3. Smontaggio dal DOM a transizione completata (1000ms dopo l'inizio dell'uscita)
-    const cleanupTimer = setTimeout(() => {
-      setStage("gone");
-    }, delay + duration + 1000);
-
     return () => {
+      cancelled = true;
       clearTimeout(peekTimer);
       clearTimeout(hideTimer);
       clearTimeout(cleanupTimer);
     };
-  }, [delay, duration]);
+  }, [id, delay, duration]);
 
-  if (stage === "gone") return null;
+  if (stage === "done") return null;
 
   const isRight = side === "right";
-
   const positionClasses = isRight ? "right-0 top-1/3" : "left-0 top-1/3";
 
   // Entrata: sporge dal bordo e si inclina dolcemente verso l'interno

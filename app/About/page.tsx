@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full border-t border-current/20">
 
-      <PeekMascot side="left" />
+      <PeekMascot id="chi-sono" side="left" />
       
       {/* Intestazione Sezione */}
       <div className="flex flex-col items-center md:items-start mb-12">

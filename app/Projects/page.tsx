@@ -12,7 +12,7 @@ export default function ProjectsPage() {
   return (
     <div className="relative flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
       {/* Mascotte che sbircia da destra */}
-      <PeekMascot side="right" />
+      <PeekMascot id="progetti" side="right" />
 
       <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">
         Projects & Case Studies

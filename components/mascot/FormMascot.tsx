@@ -5,9 +5,14 @@ import Image from "next/image";
 
 interface FormMascotProps {
   delay?: number;
+  duration?: number;
 }
 
-export default function FormMascot({ delay = 300 }: FormMascotProps) {
+export default function FormMascot({
+  delay = 300,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  duration = 3200,
+}: FormMascotProps) {
   const [hasEntered, setHasEntered] = useState(false);
 
   useEffect(() => {

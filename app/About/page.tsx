@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full border-t border-current/20">
 
-      <PeekMascot side="left" />
+      <PeekMascot id="chi-sono" side="left" />
       
       {/* Intestazione Sezione */}
       <div className="flex flex-col items-center md:items-start mb-12">
@@ -67,40 +67,31 @@ export default function About() {
           {/* Immagine 1 (Grande, occupa 2 righe a sinistra) */}
           <div className="relative rounded-2xl overflow-hidden border-2 border-current bg-black/5 light:bg-white/5 shadow-lg group">
             <Image 
-              src="/about-1.jpg" 
+              src="/img-about/daniele-1.png" 
               alt="Daniele - Vita reale e passioni" 
               fill 
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 flex items-center justify-center opacity-30 text-xs font-bold uppercase p-2 text-center">
-              [ Foto 1 Main ]
-            </div>
           </div>
 
           {/* Colonna destra con 2 foto impilate */}
           <div className="flex flex-col gap-4">
             <div className="relative flex-1 rounded-2xl overflow-hidden border-2 border-current bg-black/5 light:bg-white/5 shadow-lg group">
               <Image 
-                src="/about-2.jpg" 
+                src="/img-about/foto-profilo.png" 
                 alt="Daniele outdoor / dettagli" 
                 fill 
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-30 text-xs font-bold uppercase p-2 text-center">
-                [ Foto 2 ]
-              </div>
             </div>
 
             <div className="relative flex-1 rounded-2xl overflow-hidden border-2 border-current bg-black/5 light:bg-white/5 shadow-lg group">
               <Image 
-                src="/about-3.jpg" 
+                src="/img-about/daniele-2.png" 
                 alt="Daniele progetti / viaggio" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-30 text-xs font-bold uppercase p-2 text-center">
-                [ Foto 3 ]
-              </div>
             </div>
           </div>
         </div>
